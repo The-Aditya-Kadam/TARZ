@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tarz Salon | Unisex Salon &amp; Nail Bar in Wadala East, Mumbai</title>
-  <meta name="description" content="Tarz Salon – hair, skin, waxing, facials, permanent makeup and a full nail bar for ladies and men at Dosti Acres, Antop Hill, Wadala East, Mumbai. See prices and book on WhatsApp.">
+  <meta name="description" content="Tarz Salon – hair, skin, waxing, facials, permanent makeup and a full nail bar for ladies and men at Dosti Acres, Antop Hill, Wadala East, Mumbai. See prices and request an appointment.">
   <meta name="theme-color" content="#17140f">
   <meta property="og:title" content="Tarz Salon – Wadala East, Mumbai">
-  <meta property="og:description" content="Unisex salon &amp; nail bar. Full price list online. Book on WhatsApp: 9096109116.">
+  <meta property="og:description" content="Unisex salon &amp; nail bar. Full price list online. Plan your appointment online. Call 9096109116 to confirm.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=70">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -54,7 +54,7 @@
 
       <div class="nav-actions">
         <a href="tel:+919096109116" class="nav-call">90961 09116</a>
-        <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-small" target="_blank" rel="noopener">Book Now</a>
+        <a href="#appointment" data-booking class="btn btn-small">Book Now</a>
         <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
@@ -70,7 +70,7 @@
           <h1>Style that <em>speaks</em><br>for you.</h1>
           <p class="lead">Hair, skin, waxing, facials, permanent makeup and nail art for ladies and men, by regular and senior stylists who take their time to get it right.</p>
           <div class="hero-buttons">
-            <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn" target="_blank" rel="noopener">Book on WhatsApp</a>
+            <a href="#appointment" data-booking class="btn">Book Appointment</a>
             <a href="#prices" class="btn btn-outline">See Price List</a>
           </div>
           <ul class="hero-points">
@@ -180,7 +180,7 @@
         <div class="title">
           <p class="eyebrow">Tarz Salon · Price List</p>
           <h2>Our <em>menu</em></h2>
-          <p>All prices in ₹. Tap any service to book it on WhatsApp.</p>
+          <p>All prices in ₹. Tap any service to open its appointment form.</p>
         </div>
 
         <div class="price-tools">
@@ -221,7 +221,7 @@
             <li><span>Nail art, per nail</span><b>₹50 – ₹200</b></li>
           </ul>
           <div class="hero-buttons">
-            <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20a%20Nail%20Bar%20appointment." class="btn" target="_blank" rel="noopener">Book Nails</a>
+            <a href="#appointment" data-booking data-booking-service="Nail Bar" class="btn">Book Nails</a>
             <a href="#prices" data-tab="nails" class="link">Full nail menu →</a>
           </div>
         </div>
@@ -269,11 +269,11 @@
           <div class="visit-row">
             <h4>Timings</h4>
             <!-- Add your opening hours here, e.g.  Mon – Sun: 10:00 am – 9:00 pm -->
-            <p>Call or WhatsApp us to check today's timings and book your slot.</p>
+            <p>Call us to check today's timings and confirm your slot.</p>
           </div>
 
           <div class="hero-buttons">
-            <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a href="#appointment" data-booking class="btn">Book Appointment</a>
             <a href="tel:+919096109116" class="btn btn-outline-dark">Call Now</a>
           </div>
         </div>
@@ -289,7 +289,7 @@
       <div class="container cta-inner">
         <h2>Ready for your <em>Tarz</em> moment?</h2>
         <p>Send us a message with the service you want and a time that suits you.</p>
-        <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn" target="_blank" rel="noopener">Book on WhatsApp</a>
+        <a href="#appointment" data-booking class="btn">Book Appointment</a>
       </div>
     </section>
   </main>
@@ -312,7 +312,7 @@
         <h4>Contact</h4>
         <a href="tel:+919096109116">+91 90961 09116</a>
         <a href="tel:+919096650996">+91 90966 50996</a>
-        <a href="https://wa.me/919096109116" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#appointment" data-booking>Book Appointment</a>
       </div>
       <div>
         <h4>Address</h4>
@@ -322,12 +322,40 @@
     <p class="copy">© <span id="year"></span> Tarz Salon. All rights reserved.</p>
   </footer>
 
-  <!-- Floating WhatsApp button -->
-  <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.74A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3zm0 23.67c-2 0-3.950-.54-5.650-1.550l-.4-.24-3.96 1.040 1.060-3.860-.26-.4A10.6 10.6 0 0 1 5.4 16c0-5.870 4.770-10.640 10.640-10.640S26.660 10.130 26.660 16 21.900 26.670 16.040 26.670zm5.830-7.960c-.32-.16-1.890-.93-2.180-1.040-.3-.1-.5-.16-.72.16-.21.32-.82 1.040-1 1.250-.19.21-.37.24-.69.08-.32-.16-1.350-.5-2.570-1.590-.95-.85-1.600-1.900-1.780-2.220-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.730-.98-2.370-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.3.32-1.120 1.090-1.120 2.660s1.150 3.090 1.310 3.300c.16.21 2.260 3.450 5.470 4.840.77.33 1.360.53 1.830.68.77.24 1.470.21 2.020.13.62-.09 1.890-.77 2.160-1.520.27-.75.27-1.390.19-1.520-.08-.13-.29-.21-.61-.37z"/></svg>
+  <!-- Floating appointment button -->
+  <a href="#appointment" data-booking class="wa-float" aria-label="Open appointment form">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4m10-4v4M3 11h18m-12 5h6"/></svg>
   </a>
+
+  <dialog id="appointment" class="booking-dialog" aria-labelledby="booking-title" aria-describedby="booking-help">
+    <div class="booking-panel">
+      <button type="button" class="booking-close" aria-label="Close appointment form">×</button>
+      <p class="eyebrow">Tarz Salon · Appointments</p>
+      <h2 id="booking-title">Plan your <em>visit</em></h2>
+      <p id="booking-help">Fill in your preferences, then call the salon to confirm availability. This form does not send a booking.</p>
+      <form id="booking-form">
+        <label>Your name<input name="name" autocomplete="name" required maxlength="100"></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[+0-9() .-]{7,20}" maxlength="20" title="Enter a phone number with 7 to 20 characters."></label>
+        <label>Service<input name="service" id="booking-service" required maxlength="200" placeholder="Choose a service or tell us what you need"></label>
+        <div class="booking-grid">
+          <label>Preferred date<input name="date" id="booking-date" type="date" required></label>
+          <label>Preferred time<input name="time" type="time" required></label>
+        </div>
+        <label>Notes (optional)<textarea name="notes" rows="2" maxlength="1000" placeholder="Stylist preference or anything else we should know"></textarea></label>
+        <button type="submit" class="btn">Review Appointment</button>
+      </form>
+      <div id="booking-review" hidden role="status" aria-live="polite">
+        <h3>Your appointment preferences</h3>
+        <p id="booking-summary"></p>
+        <p>Your request has not been sent. Please call the salon to share these details and confirm your appointment.</p>
+        <a class="btn" href="tel:+919096109116">Call 90961 09116 to Confirm</a>
+        <button class="booking-edit" type="button">Edit Details</button>
+      </div>
+    </div>
+  </dialog>
 
   <script src="prices.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+

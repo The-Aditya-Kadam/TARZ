@@ -1,6 +1,3 @@
-// ===== Settings =====
-const WHATSAPP = '919096109116'; // salon WhatsApp number (country code + number, digits only)
-
 // ===== Mobile menu =====
 const menu = document.getElementById('menu');
 const menuBtn = document.getElementById('menu-btn');
@@ -12,6 +9,69 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   menu.classList.remove('open');
   menuBtn.setAttribute('aria-expanded', 'false');
 }));
+
+// ===== Appointment popup =====
+const bookingDialog = document.getElementById('appointment');
+const bookingForm = document.getElementById('booking-form');
+const bookingReview = document.getElementById('booking-review');
+const bookingService = document.getElementById('booking-service');
+const bookingDate = document.getElementById('booking-date');
+let bookingTrigger;
+function localToday() {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`;
+}
+function openBooking(service = '', trigger = document.activeElement) {
+  bookingTrigger = trigger;
+  bookingDate.min = localToday();
+  bookingService.value = service;
+  bookingForm.hidden = false;
+  bookingReview.hidden = true;
+  menu.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded', 'false');
+  if (!bookingDialog.open) bookingDialog.showModal();
+  document.body.classList.add('booking-open');
+  bookingForm.elements.name.focus();
+}
+document.querySelectorAll('[data-booking]').forEach(link => {
+  link.setAttribute('aria-haspopup', 'dialog');
+  link.setAttribute('aria-controls', 'appointment');
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    openBooking(link.dataset.bookingService || '', link);
+  });
+});
+bookingDialog.querySelector('.booking-close').addEventListener('click', () => bookingDialog.close());
+bookingDialog.addEventListener('click', event => {
+  if (event.target !== bookingDialog) return;
+  const rect = bookingDialog.getBoundingClientRect();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) bookingDialog.close();
+});
+bookingDialog.addEventListener('close', () => {
+  document.body.classList.remove('booking-open');
+  if (bookingTrigger && bookingTrigger.isConnected) bookingTrigger.focus();
+});
+bookingDate.addEventListener('input', () => bookingDate.setCustomValidity(''));
+bookingForm.addEventListener('submit', event => {
+  event.preventDefault();
+  bookingDate.min = localToday();
+  bookingDate.setCustomValidity(bookingDate.value < bookingDate.min ? 'Please choose today or a future date.' : '');
+  if (!bookingForm.reportValidity()) return;
+  const data = new FormData(bookingForm);
+  document.getElementById('booking-summary').textContent = [
+    `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`,
+    `Service: ${data.get('service')}`, `Preferred date: ${data.get('date')}`,
+    `Preferred time: ${data.get('time')}`, data.get('notes') ? `Notes: ${data.get('notes')}` : ''
+  ].filter(Boolean).join('\n');
+  bookingForm.hidden = true;
+  bookingReview.hidden = false;
+  bookingReview.querySelector('a').focus();
+});
+bookingDialog.querySelector('.booking-edit').addEventListener('click', () => {
+  bookingReview.hidden = true;
+  bookingForm.hidden = false;
+  bookingForm.elements.name.focus();
+});
 
 // ===== Price list (data comes from prices.js) =====
 const listEl = document.getElementById('price-list');
@@ -85,10 +145,9 @@ searchEl.addEventListener('input', renderPrices);
 // Links with data-tab (service cards, "Full nail menu") open that tab
 document.querySelectorAll('a[data-tab]').forEach(a => a.addEventListener('click', () => setTab(a.dataset.tab)));
 
-// Tap a price row → book that service on WhatsApp
+// Tap a price row → open the appointment form
 function bookRow(row) {
-  const msg = `Hi Tarz Salon, I'd like to book: ${row.dataset.service}`;
-  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
+  openBooking(row.dataset.service, row);
 }
 // On phones, tap a block heading to open / close it
 listEl.addEventListener('click', e => {
@@ -98,7 +157,8 @@ listEl.addEventListener('click', e => {
   if (row) bookRow(row);
 });
 listEl.addEventListener('keydown', e => {
-  if (e.key !== 'Enter') return;
+  if (e.key !== 'Enter' && e.key !== ' ') return;
+  if (e.target.closest('.card-head, tr[data-service]')) e.preventDefault();
   const head = e.target.closest('.card-head');
   if (head) { head.parentElement.classList.toggle('open'); return; }
   const row = e.target.closest('tr[data-service]');
@@ -171,3 +231,4 @@ onScroll();
 
 // ===== Footer year =====
 document.getElementById('year').textContent = new Date().getFullYear();
+
