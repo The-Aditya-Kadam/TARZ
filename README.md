@@ -1,2 +1,0 @@
-# TARZ
-Salon website
