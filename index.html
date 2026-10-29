@@ -1,473 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Salone - Beauty Salon Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:wght@500&family=Work+Sans&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarz Salon | Unisex Salon &amp; Nail Bar in Wadala East, Mumbai</title>
+  <meta name="description" content="Tarz Salon – hair, skin, waxing, facials, permanent makeup and a full nail bar for ladies and men at Dosti Acres, Antop Hill, Wadala East, Mumbai. See prices and book on WhatsApp.">
+  <meta name="theme-color" content="#17140f">
+  <meta property="og:title" content="Tarz Salon – Wadala East, Mumbai">
+  <meta property="og:description" content="Unisex salon &amp; nail bar. Full price list online. Book on WhatsApp: 9096109116.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=70">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Tarz Salon",
+    "telephone": ["+919096109116", "+919096650996"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Shop No. 21, Aster Building, Dosti Acres, S.M. Road, Antop Hill",
+      "addressLocality": "Wadala East, Mumbai",
+      "postalCode": "400037",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "priceRange": "₹₹"
+  }
+  </script>
 </head>
-
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a href="#top" class="logo" aria-label="Tarz Salon home">
+        <img src="images/logo.png" alt="Tarz Salon" width="352" height="156">
+      </a>
+
+      <nav class="menu" id="menu">
+        <a href="#services">Services</a>
+        <a href="#prices">Price List</a>
+        <a href="#nail-bar">Nail Bar</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#visit">Visit Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+919096109116" class="nav-call">90961 09116</a>
+        <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn-small" target="_blank" rel="noopener">Book Now</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Hair · Beauty · Nails — Wadala East, Mumbai</p>
+          <h1>Style that <em>speaks</em><br>for you.</h1>
+          <p class="lead">Hair, skin, waxing, facials, permanent makeup and nail art for ladies and men, by regular and senior stylists who take their time to get it right.</p>
+          <div class="hero-buttons">
+            <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn" target="_blank" rel="noopener">Book on WhatsApp</a>
+            <a href="#prices" class="btn btn-outline">See Price List</a>
+          </div>
+          <ul class="hero-points">
+            <li><strong>Ladies</strong><span>Hair · Skin · Waxing</span></li>
+            <li><strong>Men</strong><span>Cuts · Beard · Facials</span></li>
+            <li><strong>Nail Bar</strong><span>Gel · Extensions · Art</span></li>
+          </ul>
         </div>
-    </div>
-    <!-- Spinner End -->
 
-
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-light sticky-top p-0">
-        <nav class="navbar navbar-expand-lg navbar-light p-0">
-            <a href="index.html" class="navbar-brand bg-primary py-4 px-5 me-0">
-                <h1 class="mb-0"><i class="bi bi-scissors"></i>Salone</h1>
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse p-3" id="navbarCollapse">
-                <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link">Service</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu bg-light mt-2">
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <a class="btn btn-sm btn-primary" href="https://htmlcodex.com/downloading/?item=3597">Buy Pro Version</a>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
-
-
-    <!-- Hero Start -->
-    <div class="container-fluid p-0 hero-header bg-light mb-5">
-        <div class="container p-0">
-            <div class="row g-0 align-items-center">
-                <div class="col-lg-6 hero-header-text py-5">
-                    <div class="py-5 px-3 ps-lg-0">
-                        <h1 class="font-dancing-script text-primary animated slideInLeft">Welcome</h1>
-                        <h1 class="display-1 mb-4 animated slideInLeft">Beauty Salon Fashion for Women</h1>
-                        <div class="row g-4 animated slideInLeft">
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-square btn btn-primary flex-shrink-0">
-                                        <i class="fa fa-phone text-dark"></i>
-                                    </div>
-                                    <div class="px-3">
-                                        <h5 class="text-primary mb-0">Call Us</h5>
-                                        <p class="fs-5 text-dark mb-0">+123456789</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex align-items-center">
-                                    <div class="btn-square btn btn-primary flex-shrink-0">
-                                        <i class="fa fa-envelope text-dark"></i>
-                                    </div>
-                                    <div class="px-3">
-                                        <h5 class="text-primary mb-0">Mail Us</h5>
-                                        <p class="fs-5 text-dark mb-0">info@domain.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="owl-carousel header-carousel animated fadeIn">
-                        <img class="img-fluid" src="img/hero-slider-1.jpg" alt="">
-                        <img class="img-fluid" src="img/hero-slider-2.jpg" alt="">
-                        <img class="img-fluid" src="img/hero-slider-3.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+        <div class="hero-visual">
+          <div class="arch">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=75" alt="Woman with styled long hair" width="900" height="1100" fetchpriority="high">
+          </div>
+          <div class="float-card">
+            <span class="float-label">Nail art from</span>
+            <span class="float-price">₹50<small>/nail</small></span>
+          </div>
+          <div class="float-badge">Senior stylists available</div>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ RIBBON ============ -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon-track">
+        <span>Haircut</span><i>✦</i><span>Keratin &amp; Botox</span><i>✦</i><span>Hair Colour</span><i>✦</i><span>Hydra Facial</span><i>✦</i><span>Korean Glass Facial</span><i>✦</i><span>Rica Waxing</span><i>✦</i><span>Gel Extensions</span><i>✦</i><span>Nail Art</span><i>✦</i><span>Permanent Makeup</span><i>✦</i><span>Men's Grooming</span><i>✦</i>
+        <span>Haircut</span><i>✦</i><span>Keratin &amp; Botox</span><i>✦</i><span>Hair Colour</span><i>✦</i><span>Hydra Facial</span><i>✦</i><span>Korean Glass Facial</span><i>✦</i><span>Rica Waxing</span><i>✦</i><span>Gel Extensions</span><i>✦</i><span>Nail Art</span><i>✦</i><span>Permanent Makeup</span><i>✦</i><span>Men's Grooming</span><i>✦</i>
+      </div>
     </div>
-    <!-- Hero End -->
 
-
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.2s">
-                    <img class="img-fluid mb-3" src="img/about.jpg" alt="">
-                    <div class="d-flex align-items-center bg-light">
-                        <div class="btn-square flex-shrink-0 bg-primary" style="width: 100px; height: 100px;">
-                            <i class="fa fa-phone fa-2x text-dark"></i>
-                        </div>
-                        <div class="px-3">
-                            <h3>+0123456789</h3>
-                            <span>Call us direct 24/7 for get a free consultation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="font-dancing-script text-primary">About Us</h1>
-                    <h1 class="mb-5">Why People Choose Us!</h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget libero
-                        lobortis, auctor nisi quis, aliquet nunc. Nam dapibus interdum lacus, suscipit tempor odio
-                        viverra aliquam. Etiam non ex ex.</p>
-                    <div class="row g-3 mb-5">
-                        <div class="col-sm-6">
-                            <div class="bg-light text-center p-4">
-                                <i class="fas fa-calendar-alt fa-4x text-primary"></i>
-                                <h1 class="display-5" data-toggle="counter-up">25</h1>
-                                <p class="text-dark text-uppercase mb-0">Years experience</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="bg-light text-center p-4">
-                                <i class="fas fa-users fa-4x text-primary"></i>
-                                <h1 class="display-5" data-toggle="counter-up">999</h1>
-                                <p class="text-dark text-uppercase mb-0">Happy Customers</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary text-uppercase px-5 py-3" href="">Read More</a>
-                </div>
-            </div>
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="title">
+          <p class="eyebrow">What we do</p>
+          <h2>Everything you need, <em>under one roof</em></h2>
+          <p>Tap a service to see its full price list.</p>
         </div>
-    </div>
-    <!-- About End -->
 
-
-    <!-- Service Start -->
-    <div class="container-fluid service py-5">
-        <div class="container">
-            <div class="text-center wow fadeIn" data-wow-delay="0.1s">
-                <h1 class="font-dancing-script text-primary">Our Services</h1>
-                <h1 class="mb-5">Explore Our Services</h1>
-            </div>
-            <div class="row g-4 g-md-0 text-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-end wow fadeIn" data-wow-delay="0.1s">
-                        <img class="img-fluid" src="img/haircut.png" alt="">
-                        <h3 class="mb-3">Haircut</h3>
-                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
-                            et tempor eirmod magna dolore erat amet</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" href="">Read More <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-lg-end wow fadeIn" data-wow-delay="0.3s">
-                        <img class="img-fluid" src="img/makeup.png" alt="">
-                        <h3 class="mb-3">Makeup</h3>
-                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
-                            et tempor eirmod magna dolore erat amet</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" href="">Read More <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-end border-lg-end-0 wow fadeIn"
-                        data-wow-delay="0.5s">
-                        <img class="img-fluid" src="img/manicure.png" alt="">
-                        <h3 class="mb-3">Manicure</h3>
-                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
-                            et tempor eirmod magna dolore erat amet</p>
-                        <a class="btn btn-sm btn-primary text-uppercase my-2" href="">Read More <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-bottom border-lg-bottom-0 border-lg-end wow fadeIn"
-                        data-wow-delay="0.1s">
-                        <img class="img-fluid" src="img/pedicure.png" alt="">
-                        <h3 class="mb-3">Pedicure</h3>
-                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
-                            et tempor eirmod magna dolore erat amet</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" href="">Read More <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 border-end wow fadeIn" data-wow-delay="0.3s">
-                        <img class="img-fluid" src="img/massage.png" alt="">
-                        <h3 class="mb-3">Massage</h3>
-                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
-                            et tempor eirmod magna dolore erat amet</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" href="">Read More <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="service-item h-100 p-4 wow fadeIn" data-wow-delay="0.5s">
-                        <img class="img-fluid" src="img/skin-care.png" alt="">
-                        <h3 class="mb-3">Skin Care</h3>
-                        <p class="mb-3">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo
-                            et tempor eirmod magna dolore erat amet</p>
-                        <a class="btn btn-sm btn-primary text-uppercase" href="">Read More <i
-                                class="bi bi-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+        <div class="service-grid">
+          <a href="#prices" data-tab="ladies" class="service">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=70" alt="Hair styling" loading="lazy">
+            <div class="service-body"><h3>Haircut &amp; Styling</h3><p>Cuts, blow dry, ironing and tongs</p><span class="from">from ₹300</span></div>
+          </a>
+          <a href="#prices" data-tab="ladies" class="service">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=600&q=70" alt="Hair colour and treatment" loading="lazy">
+            <div class="service-body"><h3>Colour &amp; Treatments</h3><p>Global colour, keratin, rebonding, hair spa</p><span class="from">from ₹1,000</span></div>
+          </a>
+          <a href="#prices" data-tab="ladies" class="service">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=70" alt="Facial treatment" loading="lazy">
+            <div class="service-body"><h3>Facials &amp; Skin</h3><p>Hydra, Power C, Korean Glass, polishing, peels</p><span class="from">from ₹500</span></div>
+          </a>
+          <a href="#prices" data-tab="nails" class="service">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=70" alt="Nail art" loading="lazy">
+            <div class="service-body"><h3>Nail Bar</h3><p>Gel polish, extensions, overlays, nail art</p><span class="from">from ₹50</span></div>
+          </a>
+          <a href="#prices" data-tab="ladies" class="service">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=70" alt="Waxing and body care" loading="lazy">
+            <div class="service-body"><h3>Waxing &amp; Threading</h3><p>Rica Argan and Carton wax, threading, bleach</p><span class="from">from ₹80</span></div>
+          </a>
+          <a href="#prices" data-tab="ladies" class="service">
+            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?auto=format&fit=crop&w=600&q=70" alt="Pedicure" loading="lazy">
+            <div class="service-body"><h3>Manicure &amp; Pedicure</h3><p>Basic, premium, exclusive and heel peel</p><span class="from">from ₹100</span></div>
+          </a>
+          <a href="#prices" data-tab="ladies" class="service">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=600&q=70" alt="Permanent makeup" loading="lazy">
+            <div class="service-body"><h3>Permanent Makeup</h3><p>Microneedling brows, lips, lashes, lash lift</p><span class="from">from ₹1,200</span></div>
+          </a>
+          <a href="#prices" data-tab="men" class="service">
+            <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=70" alt="Men's beard grooming" loading="lazy">
+            <div class="service-body"><h3>Men's Grooming</h3><p>Haircut, beard, colour, scalp care, facials</p><span class="from">from ₹150</span></div>
+          </a>
         </div>
-    </div>
-    <!-- Service End -->
+      </div>
+    </section>
 
-
-    <!-- Team Start -->
-    <div class="container-fluid overflow-hidden py-5">
-        <div class="container">
-            <div class="text-center wow fadeIn" data-wow-delay="0.2s">
-                <h1 class="font-dancing-script text-primary">Team Members</h1>
-                <h1 class="mb-5">Our Experienced Specialists</h1>
-            </div>
-            <div class="row g-4 team">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                        <div class="team-overlay">
-                            <p class="text-primary mb-1">Hair Specialist</p>
-                            <h4>Lily Taylor</h4>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2" href="">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                        <div class="team-overlay">
-                            <p class="text-primary mb-1">Nail Designer</p>
-                            <h4>Olivia Smith</h4>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2" href="">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                        <div class="team-overlay">
-                            <p class="text-primary mb-1">Beauty Specialist</p>
-                            <h4>Ava Brown</h4>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2" href="">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                        <div class="team-overlay">
-                            <p class="text-primary mb-1">Spa Specialist</p>
-                            <h4>Amelia Jones</h4>
-                            <div class="d-flex justify-content-center">
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2 me-3" href="">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a class="btn btn-dark btn-sm-square border-2" href="">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- ============ WHY TARZ ============ -->
+    <section class="why">
+      <div class="container why-grid">
+        <div class="why-item">
+          <span class="why-num">01</span>
+          <h3>Regular &amp; Senior Stylists</h3>
+          <p>Choose the expertise and price that suits you. Both prices are listed for every service.</p>
         </div>
-    </div>
-    <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="text-center wow fadeIn" data-wow-delay="0.2s">
-                <h1 class="font-dancing-script text-primary">Testimonial</h1>
-                <h1 class="mb-5">What Clients Say!</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.3s">
-                <div class="text-center bg-light p-4">
-                    <i class="fa fa-quote-left fa-3x mb-3"></i>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-1.jpg" alt="">
-                    <h4 class="mb-1">Client Name</h4>
-                    <span>Profession</span>
-                </div>
-                <div class="text-center bg-light p-4">
-                    <i class="fa fa-quote-left fa-3x mb-3"></i>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-2.jpg" alt="">
-                    <h4 class="mb-1">Client Name</h4>
-                    <span>Profession</span>
-                </div>
-                <div class="text-center bg-light p-4">
-                    <i class="fa fa-quote-left fa-3x mb-3"></i>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-3.jpg" alt="">
-                    <h4 class="mb-1">Client Name</h4>
-                    <span>Profession</span>
-                </div>
-                <div class="text-center bg-light p-4">
-                    <i class="fa fa-quote-left fa-3x mb-3"></i>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <img class="img-fluid mx-auto border p-1 mb-3" src="img/testimonial-4.jpg" alt="">
-                    <h4 class="mb-1">Client Name</h4>
-                    <span>Profession</span>
-                </div>
-            </div>
+        <div class="why-item">
+          <span class="why-num">02</span>
+          <h3>Trusted Products</h3>
+          <p>L'Oréal and Argan hair spas, Rica Argan and Carton wax, and professional skin care.</p>
         </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid footer position-relative bg-dark text-white-50 py-5 mt-5 wow fadeIn" data-wow-delay="0.2s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-6 pe-lg-5">
-                    <a href="index.html" class="navbar-brand">
-                        <h1 class="display-5 text-primary mb-0"><i class="bi bi-scissors"></i>Salone</h1>
-                    </a>
-                    <p>Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem nonumy. Tempor sea ipsum diam  sed clita dolore eos dolores magna erat dolore sed stet justo et dolor.</p>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-2"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
-                    <div class="d-flex justify-content-start mt-4">
-                        <a class="btn btn-sm-square btn-primary me-3" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-sm-square btn-primary me-3" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-sm-square btn-primary me-3" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-sm-square btn-primary me-3" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-6 ps-lg-5">
-                    <div class="row g-4">
-                        <div class="col-sm-6">
-                            <h5 class="text-primary mb-4">Quick Links</h5>
-                            <a class="btn btn-link" href="">About Us</a>
-                            <a class="btn btn-link" href="">Contact Us</a>
-                            <a class="btn btn-link" href="">Our Services</a>
-                            <a class="btn btn-link" href="">Terms & Condition</a>
-                        </div>
-                        <div class="col-sm-6">
-                            <h5 class="text-primary mb-4">Popular Links</h5>
-                            <a class="btn btn-link" href="">About Us</a>
-                            <a class="btn btn-link" href="">Contact Us</a>
-                            <a class="btn btn-link" href="">Our Services</a>
-                            <a class="btn btn-link" href="">Terms & Condition</a>
-                        </div>
-                        <div class="col-sm-12">
-                            <h5 class="text-primary mb-4">Newsletter</h5>
-                            <div class="position-relative w-100 mb-2">
-                                <input class="form-control bg-secondary border-0 w-100 ps-4 pe-5" type="text"
-                                    placeholder="Enter Your Email" style="height: 60px;">
-                                <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
-                                        class="fa fa-paper-plane text-primary fs-4"></i></button>
-                            </div>
-                            <p class="mb-0">Diam sed sed dolor stet amet eirmod</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="why-item">
+          <span class="why-num">03</span>
+          <h3>Ladies, Men &amp; Nails</h3>
+          <p>A full salon and a dedicated nail bar in one place at Dosti Acres, Antop Hill.</p>
         </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
-    <div class="container-fluid bg-dark text-white border-top border-secondary py-4 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-
-                    <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                    <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                    Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                </div>
-            </div>
+        <div class="why-item">
+          <span class="why-num">04</span>
+          <h3>Clear Prices</h3>
+          <p>Our complete price list is right here. You know what you pay before you sit down.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICE LIST ============ -->
+    <!-- The prices themselves live in prices.js — edit them there. -->
+    <section class="section prices" id="prices">
+      <div class="container">
+        <div class="title">
+          <p class="eyebrow">Tarz Salon · Price List</p>
+          <h2>Our <em>menu</em></h2>
+          <p>All prices in ₹. Tap any service to book it on WhatsApp.</p>
+        </div>
+
+        <div class="price-tools">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="ladies" role="tab" aria-selected="true">Ladies</button>
+            <button class="tab" data-tab="men" role="tab" aria-selected="false">Men</button>
+            <button class="tab" data-tab="nails" role="tab" aria-selected="false">Nail Bar</button>
+          </div>
+          <label class="search">
+            <span class="sr-only">Search services</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="search" id="price-search" placeholder="Search: facial, keratin, waxing…" autocomplete="off">
+          </label>
+        </div>
+
+        <div id="price-list" class="price-list" aria-live="polite">
+          <p class="empty">Please enable JavaScript to see the price list, or call 9096109116.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NAIL BAR ============ -->
+    <section class="nailbar" id="nail-bar">
+      <div class="container nailbar-grid">
+        <div class="nailbar-photos">
+          <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=600&q=70" alt="Gel nail art" loading="lazy" class="np1">
+          <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=600&q=70" alt="Manicured nails" loading="lazy" class="np2">
+        </div>
+        <div class="nailbar-text">
+          <p class="eyebrow">The Tarz Nail Bar</p>
+          <h2>Nails that get <em>noticed</em></h2>
+          <p>From a clean gel polish on natural nails to full extensions with chrome, cat eye, ombre or marble art. Refills, overlays and safe removal too.</p>
+          <ul class="nail-prices">
+            <li><span>Gel polish on natural nails</span><b>₹700</b></li>
+            <li><span>Temporary tips (hands)</span><b>₹2,000</b></li>
+            <li><span>Extensions (hands)</span><b>₹3,000</b></li>
+            <li><span>Overlays (hands)</span><b>₹2,000</b></li>
+            <li><span>Nail art, per nail</span><b>₹50 – ₹200</b></li>
+          </ul>
+          <div class="hero-buttons">
+            <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20a%20Nail%20Bar%20appointment." class="btn" target="_blank" rel="noopener">Book Nails</a>
+            <a href="#prices" data-tab="nails" class="link">Full nail menu →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="title">
+          <p class="eyebrow">Gallery</p>
+          <h2>A look <em>inside</em></h2>
+        </div>
+        <!-- Replace these with your own salon photos: put them in the images folder and use src="images/photo1.jpg" -->
+        <div class="gallery">
+          <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=70" alt="Salon interior" loading="lazy" class="g-tall">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=600&q=70" alt="Blow dry styling" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=600&q=70" alt="Styling chairs" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=800&q=70" alt="Salon mirrors" loading="lazy" class="g-wide">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=70" alt="Beauty products" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1634449571010-02389ed0f9b0?auto=format&fit=crop&w=600&q=70" alt="Hair wash" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISIT ============ -->
+    <section class="visit" id="visit">
+      <div class="container visit-grid">
+        <div class="visit-card">
+          <img src="images/logo-emblem.png" alt="Tarz Salon – Hair | Beauty | Nails" class="visit-emblem" width="285" height="175" loading="lazy">
+          <p class="eyebrow">Visit us</p>
+          <h2>Come say <em>hello</em></h2>
+
+          <div class="visit-row">
+            <h4>Address</h4>
+            <p>Shop No. 21, Aster Building, Dosti Acres,<br>S.M. Road, Antop Hill, Wadala East,<br>Mumbai – 400037</p>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Dosti+Acres+Aster+Building+Antop+Hill+Wadala+East+Mumbai+400037" target="_blank" rel="noopener">Get directions →</a>
+          </div>
+
+          <div class="visit-row">
+            <h4>For appointments</h4>
+            <p><a href="tel:+919096109116">+91 90961 09116</a><br><a href="tel:+919096650996">+91 90966 50996</a></p>
+          </div>
+
+          <div class="visit-row">
+            <h4>Timings</h4>
+            <!-- Add your opening hours here, e.g.  Mon – Sun: 10:00 am – 9:00 pm -->
+            <p>Call or WhatsApp us to check today's timings and book your slot.</p>
+          </div>
+
+          <div class="hero-buttons">
+            <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a href="tel:+919096109116" class="btn btn-outline-dark">Call Now</a>
+          </div>
+        </div>
+
+        <div class="map">
+          <iframe title="Tarz Salon on Google Maps" src="https://maps.google.com/maps?q=Dosti%20Acres%20Aster%20Building%20Antop%20Hill%20Wadala%20East%20Mumbai%20400037&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h2>Ready for your <em>Tarz</em> moment?</h2>
+        <p>Send us a message with the service you want and a time that suits you.</p>
+        <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn" target="_blank" rel="noopener">Book on WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#top" class="logo logo-footer"><img src="images/logo.png" alt="Tarz Salon" width="352" height="156" loading="lazy"></a>
+        <p>Unisex salon &amp; nail bar in Wadala East, Mumbai.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="#services">Services</a>
+        <a href="#prices">Price List</a>
+        <a href="#nail-bar">Nail Bar</a>
+        <a href="#gallery">Gallery</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+919096109116">+91 90961 09116</a>
+        <a href="tel:+919096650996">+91 90966 50996</a>
+        <a href="https://wa.me/919096109116" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <p>Shop No. 21, Aster Building, Dosti Acres, S.M. Road, Antop Hill, Wadala East, Mumbai – 400037</p>
+      </div>
     </div>
-    <!-- Copyright End -->
+    <p class="copy">© <span id="year"></span> Tarz Salon. All rights reserved.</p>
+  </footer>
 
+  <!-- Floating WhatsApp button -->
+  <a href="https://wa.me/919096109116?text=Hi%20Tarz%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.74A13 13 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3zm0 23.67c-2 0-3.950-.54-5.650-1.550l-.4-.24-3.96 1.040 1.060-3.860-.26-.4A10.6 10.6 0 0 1 5.4 16c0-5.870 4.770-10.640 10.640-10.640S26.660 10.130 26.660 16 21.900 26.670 16.040 26.670zm5.830-7.960c-.32-.16-1.890-.93-2.180-1.040-.3-.1-.5-.16-.72.16-.21.32-.82 1.040-1 1.250-.19.21-.37.24-.69.08-.32-.16-1.350-.5-2.570-1.590-.95-.85-1.600-1.900-1.780-2.220-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.730-.98-2.370-.26-.62-.52-.54-.72-.55h-.61c-.21 0-.56.08-.85.4-.3.32-1.120 1.090-1.120 2.660s1.150 3.090 1.310 3.300c.16.21 2.260 3.450 5.470 4.840.77.33 1.360.53 1.830.68.77.24 1.470.21 2.020.13.62-.09 1.890-.77 2.160-1.520.27-.75.27-1.390.19-1.520-.08-.13-.29-.21-.61-.37z"/></svg>
+  </a>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <script src="prices.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
