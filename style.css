@@ -147,7 +147,6 @@ h1 em, h2 em { font-style: italic; color: var(--gold); font-weight: 600; }
 .price-table tbody tr { cursor: pointer; transition: background .15s; }
 .price-table tbody tr:hover, .price-table tbody tr:focus { background: #f8efdc; outline: none; }
 .price-table tbody tr:hover td:first-child, .price-table tbody tr:focus td:first-child { color: var(--gold-dark); }
-.price-table tbody tr:hover td:first-child::after { content: "  · Book"; font-size: 12px; color: var(--gold); font-weight: 500; }
 .price-table mark { background: #f3df9f; color: inherit; border-radius: 3px; padding: 0 2px; }
 .card-sum { display: none; }
 .card-head { outline: none; }
