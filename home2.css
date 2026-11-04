@@ -96,3 +96,7 @@ h2 { font-size:clamp(40px,4.5vw,64px); font-weight:500; letter-spacing:-1px; }
 .reference-logo { mix-blend-mode:normal; }
 .reference-logo image { filter:url(#logo-remove-cream); }
 .brand-plaque { background:transparent; border:0; box-shadow:none; padding:0; transform:none; }
+
+/* Draw the CTA arrow as a vector for consistent iOS and Android rendering. */
+.visit-arrow { display:inline-block; flex-shrink:0; width:18px; height:18px; margin-left:24px; vertical-align:-3px; }
+@media(max-width:760px) { .visit-arrow { margin-left:14px; } }
