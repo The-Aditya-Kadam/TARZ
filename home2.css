@@ -47,7 +47,7 @@ h2 { font-size:clamp(40px,4.5vw,64px); font-weight:500; letter-spacing:-1px; }
 .title >p:last-child { font-size:14px; }
 .service-grid { gap:24px; }
 .service { border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; box-shadow:none; }
-.service img { height:230px; border-radius:140px 140px 2px 2px; filter:saturate(.75); }
+.service img { height:230px; border-radius:0; filter:saturate(.75); }
 .service-body { padding:23px 4px; }
 .service h3 { font-size:25px; font-weight:500; }
 .service p { font-size:13px; }
