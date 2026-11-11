@@ -77,6 +77,7 @@ bookingForm.addEventListener('submit', async event => {
       body: JSON.stringify({
         ...data,
         _subject: 'Tarz Salon website appointment request',
+        _cc: 'tarzsalon9096109116@gmail.com',
         _template: 'table',
         _captcha: 'false'
       })

@@ -17,7 +17,7 @@ A simple one-page salon website in plain HTML, CSS and JavaScript. No build step
 - **Prices:** open `prices.js` and change the numbers (no commas: `1200`). Use `null` for "not offered".
 - **Logo:** copy your logo into `images/logo.png`, then in `index.html` follow the note above `<a href="#top" class="logo">`.
 - **Phone:** update the telephone links and contact text in `index.html`.
-- **Appointments:** Booking links and price rows open the on-page appointment form. FormSubmit forwards the customer's name, phone, service, preferred date and time, and optional notes to `agencywork187@gmail.com`. The mailbox owner must approve FormSubmit's activation email after the first test submission. The salon confirms appointment availability by phone.
+- **Appointments:** Booking links and price rows open the on-page appointment form. FormSubmit forwards the customer's name, phone, service, preferred date and time, and optional notes to `agencywork187@gmail.com` and copies `tarzsalon9096109116@gmail.com`. The primary mailbox owner must approve FormSubmit's activation email after the first test submission. The salon confirms appointment availability by phone.
 - **Timings:** in `index.html`, find "Timings" and write your opening hours.
 - **Photos:** copy your photos into `images/` and change the links, e.g. `src="images/salon-1.jpg"`.
 - **Colours:** at the top of `style.css`.
