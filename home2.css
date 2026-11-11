@@ -40,17 +40,23 @@ body { background:var(--cream); }
 .hero-bottom >span { font-size:9px; letter-spacing:2px; color:var(--gold-dark); }
 .hero-bottom p { font-family:var(--serif); font-size:20px; font-style:italic; }
 .hero-bottom a { margin-left:auto; font-size:10px; color:var(--muted); }
-.ribbon { background:#ede1c9; color:var(--gold-dark); border-block:1px solid var(--line); padding:14px 0; }
-.ribbon-track { font-size:19px; font-weight:500; }
 .section { padding:100px 0; }
 .title { margin-bottom:50px; }
 h2 { font-size:clamp(40px,4.5vw,64px); font-weight:500; letter-spacing:-1px; }
 .title::after { content:'— ✦ —'; font-size:11px; letter-spacing:8px; }
 .title >p:last-child { font-size:14px; }
 .service-grid { gap:24px; }
-.service { border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; box-shadow:none; }
-.service img { height:230px; border-radius:140px 140px 2px 2px; filter:saturate(.75); }
-.service-body { padding:23px 4px; }
+.service {
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  box-shadow: none;
+}
+.service:focus-visible {
+  outline: 2px solid var(--gold-dark);
+  outline-offset: 3px;
+}
+.service-body { padding: 23px 20px; }
 .service h3 { font-size:25px; font-weight:500; }
 .service p { font-size:13px; }
 .service:hover { box-shadow:none; border-color:var(--gold); }
@@ -88,8 +94,8 @@ h2 { font-size:clamp(40px,4.5vw,64px); font-weight:500; letter-spacing:-1px; }
 .wa-float { background:var(--gold); box-shadow:0 7px 20px #805b1033; animation:none; border:1px solid #cfa749; }
 .booking-dialog { background:var(--ivory); border-radius:8px; }
 @media(min-width:761px) and (max-width:1100px) { .nav-call { display:none; } .menu { gap:16px; } .hero-grid { gap:25px; } .hero h1 { font-size:70px; } }
-@media(max-width:960px) { .hero-grid { grid-template-columns:1fr 1fr; text-align:left; } .hero-visual { padding-inline:15px; } .hero h1 { font-size:62px; letter-spacing:-2px; } .arch img { height:470px; } .brand-plaque { width:180px; left:-8px; } .service img { height:270px; } .nailbar-text { text-align:left; } }
-@media(max-width:760px) { .container { width:calc(100% - 36px); } .nav { height:82px; gap:12px; } .logo { width:106px; } .menu { top:82px; } .menu-btn { border-radius:2px; } .btn-small { padding:10px 13px; font-size:11px; } .hero-grid { grid-template-columns:1fr; gap:38px; padding:38px 0 26px; } .hero .eyebrow { font-size:9px; letter-spacing:1.5px; margin-bottom:22px; } .hero h1 { font-size:clamp(60px,12vw,84px); letter-spacing:-2px; } .lead { font-size:14px; margin-inline:0; } .hero-caption { margin-top:28px; } .hero-visual { width:min(440px,100% - 12px); justify-self:center; padding:10px 22px 30px; } .arch img { height:420px; } .brand-plaque { left:0; width:180px; bottom:55px; } .hero-word { right:-5px; font-size:85px; } .hero-bottom { gap:12px; flex-wrap:wrap; } .hero-bottom >span { font-size:8px; } .hero-bottom p { font-size:17px; } .hero-bottom a { display:none; } .hero-buttons { gap:18px; } .btn { padding:13px 18px; } .btn span { margin-left:14px; } .text-link { font-size:12px; } .section { padding:65px 0; } h2 { font-size:43px; } .service-grid { gap:20px 14px; } .service img { height:180px; } .service-body { padding:16px 2px; } .service h3 { font-size:22px; } .service p { font-size:12px; } .why-grid { grid-template-columns:1fr 1fr; gap:28px 20px; } .why-item h3 { font-size:21px; } .why-item p { font-size:12px; } .nailbar-photos { height:390px; } .visit-card { padding:32px 24px; } .footer-grid { grid-template-columns:1fr 1fr; gap:30px 20px; } .copy { padding:20px 24px 85px; font-size:12px; } }
+@media(max-width:960px) { .hero-grid { grid-template-columns:1fr 1fr; text-align:left; } .hero-visual { padding-inline:15px; } .hero h1 { font-size:62px; letter-spacing:-2px; } .arch img { height:470px; } .brand-plaque { width:180px; left:-8px; } .nailbar-text { text-align:left; } }
+@media(max-width:760px) { .container { width:calc(100% - 36px); } .nav { height:82px; gap:12px; } .logo { width:106px; } .menu { top:82px; } .menu-btn { border-radius:2px; } .btn-small { padding:10px 13px; font-size:11px; } .hero-grid { grid-template-columns:1fr; gap:38px; padding:38px 0 26px; } .hero .eyebrow { font-size:9px; letter-spacing:1.5px; margin-bottom:22px; } .hero h1 { font-size:clamp(60px,12vw,84px); letter-spacing:-2px; } .lead { font-size:14px; margin-inline:0; } .hero-caption { margin-top:28px; } .hero-visual { width:min(440px,100% - 12px); justify-self:center; padding:10px 22px 30px; } .arch img { height:420px; } .brand-plaque { left:0; width:180px; bottom:55px; } .hero-word { right:-5px; font-size:85px; } .hero-bottom { gap:12px; flex-wrap:wrap; } .hero-bottom >span { font-size:8px; } .hero-bottom p { font-size:17px; } .hero-bottom a { display:none; } .hero-buttons { gap:18px; } .btn { padding:13px 18px; } .btn span { margin-left:14px; } .text-link { font-size:12px; } .section { padding:65px 0; } h2 { font-size:43px; } .service-grid { gap:20px 14px; } .service-body { padding: 16px 12px; } .service h3 { font-size:22px; } .service p { font-size:12px; } .why-grid { grid-template-columns:1fr 1fr; gap:28px 20px; } .why-item h3 { font-size:21px; } .why-item p { font-size:12px; } .nailbar-photos { height:390px; } .visit-card { padding:32px 24px; } .footer-grid { grid-template-columns:1fr 1fr; gap:30px 20px; } .copy { padding:20px 24px 85px; font-size:12px; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
 
 /* Remove cream pixels while retaining the original gold RGB artwork. */
