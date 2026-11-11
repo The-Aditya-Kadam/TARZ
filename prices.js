@@ -141,13 +141,6 @@ const PRICE_LIST = {
         ["Feet – Massage + Hot Towel", "30 min", 800, 1000],
         ["Back – Massage + Hot Towel", "30 min", 900, 1100]
       ]},
-      { title: "Permanent Makeup", cols: ["Price"], items: [
-        ["Microneedling – Eyebrows", "120 min", 7000],
-        ["Lips", "120 min", 5000],
-        ["Beauty Spot", "30 min", 1200],
-        ["Eyelashes", "120 min", 4500],
-        ["Eyelash Lifting", "60 min", 3000]
-      ]},
       { title: "Skin Polishing", cols: ["Regular", "Senior Therapist"], note: "Cleansing + Bleach + Scrub + Massage + Pack", items: [
         ["Full Hand", "90 min", 4000, 4500],
         ["Full Leg", "120 min", 5000, 5500],
