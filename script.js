@@ -14,6 +14,8 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 const bookingDialog = document.getElementById('appointment');
 const bookingForm = document.getElementById('booking-form');
 const bookingReview = document.getElementById('booking-review');
+const bookingError = document.getElementById('booking-error');
+const bookingSubmit = bookingForm.querySelector('button[type="submit"]');
 const bookingService = document.getElementById('booking-service');
 const bookingDate = document.getElementById('booking-date');
 let bookingTrigger;
@@ -23,15 +25,18 @@ function localToday() {
 }
 function openBooking(service = '', trigger = document.activeElement) {
   bookingTrigger = trigger;
-  bookingDate.min = localToday();
-  bookingService.value = service;
-  bookingForm.hidden = false;
-  bookingReview.hidden = true;
+  if (!bookingSubmit.disabled) {
+    bookingDate.min = localToday();
+    bookingService.value = service;
+    bookingForm.hidden = false;
+    bookingReview.hidden = true;
+    bookingError.hidden = true;
+  }
   menu.classList.remove('open');
   menuBtn.setAttribute('aria-expanded', 'false');
   if (!bookingDialog.open) bookingDialog.showModal();
   document.body.classList.add('booking-open');
-  bookingForm.elements.name.focus();
+  if (!bookingSubmit.disabled) bookingForm.elements.name.focus();
 }
 document.querySelectorAll('[data-booking]').forEach(link => {
   link.setAttribute('aria-haspopup', 'dialog');
@@ -52,26 +57,48 @@ bookingDialog.addEventListener('close', () => {
   if (bookingTrigger && bookingTrigger.isConnected) bookingTrigger.focus();
 });
 bookingDate.addEventListener('input', () => bookingDate.setCustomValidity(''));
-bookingForm.addEventListener('submit', event => {
+bookingForm.addEventListener('submit', async event => {
   event.preventDefault();
+  if (bookingSubmit.disabled) return;
   bookingDate.min = localToday();
   bookingDate.setCustomValidity(bookingDate.value < bookingDate.min ? 'Please choose today or a future date.' : '');
   if (!bookingForm.reportValidity()) return;
-  const data = new FormData(bookingForm);
-  document.getElementById('booking-summary').textContent = [
-    `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`,
-    `Service: ${data.get('service')}`, `Preferred date: ${data.get('date')}`,
-    `Preferred time: ${data.get('time')}`, data.get('notes') ? `Notes: ${data.get('notes')}` : ''
-  ].filter(Boolean).join('\n');
-  bookingForm.hidden = true;
-  bookingReview.hidden = false;
-  bookingReview.querySelector('a').focus();
+
+  const data = Object.fromEntries(new FormData(bookingForm));
+  const buttonLabel = bookingSubmit.textContent;
+  bookingError.hidden = true;
+  bookingSubmit.disabled = true;
+  bookingSubmit.textContent = 'Sending…';
+  try {
+    const response = await fetch(bookingForm.action, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      signal: AbortSignal.timeout(15000),
+      body: JSON.stringify({
+        ...data,
+        _subject: 'Tarz Salon website appointment request',
+        _template: 'table',
+        _captcha: 'false'
+      })
+    });
+    const result = await response.json();
+    if (!response.ok || (result.success !== true && result.success !== 'true')) {
+      bookingError.hidden = false;
+      return;
+    }
+    bookingForm.reset();
+    bookingForm.hidden = true;
+    bookingReview.hidden = false;
+    if (bookingDialog.open) document.getElementById('booking-receipt').focus();
+  } catch {
+    bookingError.hidden = false;
+  } finally {
+    bookingSubmit.disabled = false;
+    bookingSubmit.textContent = buttonLabel;
+    if (!bookingError.hidden && bookingDialog.open) bookingSubmit.focus();
+  }
 });
-bookingDialog.querySelector('.booking-edit').addEventListener('click', () => {
-  bookingReview.hidden = true;
-  bookingForm.hidden = false;
-  bookingForm.elements.name.focus();
-});
+bookingDialog.querySelector('.booking-done').addEventListener('click', () => bookingDialog.close());
 
 // ===== Price list (data comes from prices.js) =====
 const listEl = document.getElementById('price-list');

@@ -316,24 +316,24 @@
       <button type="button" class="booking-close" aria-label="Close appointment form">×</button>
       <p class="eyebrow">Tarz Salon · Appointments</p>
       <h2 id="booking-title">Plan your <em>visit</em></h2>
-      <p id="booking-help">Fill in your preferences, then call the salon to confirm availability. This form does not send a booking.</p>
-      <form id="booking-form">
+      <p id="booking-help">Send your preferred date and time. The salon will call you to confirm availability.</p>
+      <form id="booking-form" action="https://formsubmit.co/ajax/tarzsalon9096109116@gmail.com" method="post">
+        <div hidden><input name="_honey" tabindex="-1" autocomplete="off"></div>
         <label>Your name<input name="name" autocomplete="name" required maxlength="100"></label>
-        <label>Phone number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[+0-9() .-]{7,20}" maxlength="20" title="Enter a phone number with 7 to 20 characters."></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[+0-9\(\) .\-]{7,20}" maxlength="20" title="Enter a phone number with 7 to 20 characters."></label>
         <label>Service<input name="service" id="booking-service" required maxlength="200" placeholder="Choose a service or tell us what you need"></label>
         <div class="booking-grid">
           <label>Preferred date<input name="date" id="booking-date" type="date" required></label>
           <label>Preferred time<input name="time" type="time" required></label>
         </div>
         <label>Notes (optional)<textarea name="notes" rows="2" maxlength="1000" placeholder="Stylist preference or anything else we should know"></textarea></label>
-        <button type="submit" class="btn">Review Appointment</button>
+        <p id="booking-error" role="alert" hidden>We couldn’t send your request. Please try again or call <a href="tel:+919096109116">90961 09116</a>.</p>
+        <button type="submit" class="btn">Send Appointment Request</button>
       </form>
-      <div id="booking-review" hidden role="status" aria-live="polite">
-        <h3>Your appointment preferences</h3>
-        <p id="booking-summary"></p>
-        <p>Your request has not been sent. Please call the salon to share these details and confirm your appointment.</p>
-        <a class="btn" href="tel:+919096109116">Call 90961 09116 to Confirm</a>
-        <button class="booking-edit" type="button">Edit Details</button>
+      <div id="booking-review" hidden>
+        <h3 id="booking-receipt" tabindex="-1">Appointment request sent</h3>
+        <p>The salon will call you to confirm your appointment.</p>
+        <button class="btn booking-done" type="button">Done</button>
       </div>
     </div>
   </dialog>

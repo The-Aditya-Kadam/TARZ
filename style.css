@@ -432,6 +432,7 @@ body.booking-open { overflow: hidden; }
 #booking-form textarea { resize: vertical; }
 .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .booking-dialog :focus-visible { outline: 2px solid var(--gold-dark); outline-offset: 3px; }
-#booking-summary { white-space: pre-wrap; overflow-wrap: anywhere; padding: 16px; background: var(--cream); border-radius: 8px; }
-.booking-edit { display: block; margin-top: 16px; background: transparent; border: 0; color: var(--gold-dark); text-decoration: underline; cursor: pointer; }
+#booking-error { color: #8b241d; margin: 0; }
+#booking-error a { text-decoration: underline; }
+#booking-form button:disabled { cursor: wait; opacity: .7; }
 @media (max-width: 480px) { .booking-panel { padding: 26px 18px; } .booking-grid { grid-template-columns: 1fr; } }
