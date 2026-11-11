@@ -36,6 +36,10 @@ body { background:var(--cream); }
 .hero-word { position:absolute; right:-24px; bottom:4px; font-family:var(--serif); font-size:112px; line-height:1; letter-spacing:10px; color:var(--gold); opacity:.12; z-index:0; pointer-events:none; }
 .brand-plaque { position:absolute; bottom:65px; left:-26px; width:210px; padding:16px 23px; border:1px solid #e7d9ba; border-radius:8px; background:linear-gradient(130deg,#faf3e2,#e8ddc2); box-shadow:0 13px 30px #6c55212b, inset 0 1px 0 #fff; transform:rotate(-5deg); }
 .image-caption { position:absolute; right:0; top:52%; writing-mode:vertical-rl; font-size:8px; letter-spacing:2px; color:var(--gold-dark); }
+.hero-visual.team-visual { padding-inline:0; }
+.team-visual .portrait-frame { border-radius:4px; }
+.team-visual .portrait-frame img { display:block; width:100%; height:auto; border-radius:2px; }
+.team-visual .image-caption { position:static; writing-mode:horizontal-tb; margin-top:12px; text-align:center; }
 .hero-bottom { display:flex; align-items:center; gap:34px; padding:22px 0; border-top:1px solid var(--line); }
 .hero-bottom >span { font-size:9px; letter-spacing:2px; color:var(--gold-dark); }
 .hero-bottom p { font-family:var(--serif); font-size:20px; font-style:italic; }
